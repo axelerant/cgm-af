@@ -3,14 +3,14 @@
 	Template Name: AF Template
 */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 
 <div class="quarter">
 
 <h5><a href="http://af.stonebriar.org/" >Fellowship Groups</a></h5>
 	<div class="menu">
 	<ul id="menu">
-		<?  
+		<?php  
 			global $current_site;
 			$blogs = $wpdb->get_results( "SELECT blog_id, domain, path FROM $wpdb->blogs WHERE site_id = '$wpdb->siteid' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' ORDER BY path ASC", ARRAY_A );
 			//echo $blogs;
@@ -31,7 +31,7 @@
 </div>
 
 <div class="three_quarters">
-	<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<h1><?php the_title(); ?></h1>
 				<div class="entry">
@@ -41,10 +41,10 @@
 				</div>
 		</div>
 		<span class="clear">&nbsp;</span>
-	<? endwhile; endif; ?>
-	<? if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what you're looking for.</p><? } ?>
+	<?php endwhile; endif; ?>
+	<?php if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what you're looking for.</p><?php } ?>
 </div>
 <!-- end .three_quarters -->
 
 
-<? get_footer(); ?>
+<?php get_footer(); ?>

@@ -37,11 +37,11 @@
 <!-- end #footer_wrap -->
 <?php wp_footer(); ?>
 <!--
-	<script type="text/javascript" src="<? bloginfo('template_url'); ?>/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
 -->
-	<script type="text/javascript" src="<? bloginfo('template_url'); ?>/js/global.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/global.js"></script>
 <!--
-	<script type="text/javascript" src="<? bloginfo('template_url'); ?>/js/imgfloat.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/imgfloat.js"></script>
 -->
 </body>
 </html>

@@ -19,11 +19,11 @@
 
 			<!--  ******************** End Public Sidebar Links ******************** -->
 
-					  <? $curuser= (is_user_member_of_blog(get_current_user_id()) || current_user_can('manage_options')); // checking to see if user logged in ?>
+					  <?php $curuser= (is_user_member_of_blog(get_current_user_id()) || current_user_can('manage_options')); // checking to see if user logged in ?>
 
 			<!--  ******************** Begin Require Login All Groups Links ******************** -->
 
-					  <? if($curuser){ ?>
+					  <?php if($curuser){ ?>
 					  	<li>
 					  	<a href="<?php bloginfo('url'); ?>/resources/">Resources</a>
 					  	</li>
@@ -33,7 +33,7 @@
 						<li>
 						<a href="<?php bloginfo('url'); ?>/leaders/">Leadership Team</a>
 						</li>
-					  <? } ?>
+					  <?php } ?>
 
 			<!--  ******************** End Require Login All Groups Links ******************** -->
 
@@ -42,11 +42,11 @@
 
 <!-- *EXAMPLE* Begin [Group Name] Section *EXAMPLE* -->
 
-					  <? if($wpdb->blogid == 0){ ?> <!-- Replace 00 with the blog id -->
+					  <?php if($wpdb->blogid == 0){ ?> <!-- Replace 00 with the blog id -->
 						<li>
 						<a href="<?php bloginfo('url'); ?>/pageslug/">Page Name</a> <!-- Replace /pageslug/ with the page slug of the page you want the link to take you to. Replace 'Page Name' with The name of the Link you want displayed -->
 						</li>
-					  <? } ?>
+					  <?php } ?>
 
 <!-- *EXAMPLE* End [Group Name] Section *EXAMPLE* -->
 
@@ -55,11 +55,11 @@
 
 			<!--  ******************** Begin Require Login Group Specific Links ******************** -->	
 
-					  <? if($curuser){ ?>
+					  <?php if($curuser){ ?>
 
 <!-- Begin Worship Matters Section -->	
 			
-						<? if($wpdb->blogid == 39){ ?>
+						<?php if($wpdb->blogid == 39){ ?>
 						  <li>
 						  <a href="<?php bloginfo('url'); ?>/orchestra/">Stonebriar Orchestra</a>
 						  </li>
@@ -69,14 +69,14 @@
 						  <li>
 						  <a href="<?php bloginfo('url'); ?>/brass/">Stonebriar Brass</a>
 						  </li>
-						<? } ?>
+						<?php } ?>
 
 <!-- End Worship Matters Section -->
 						
 					
 <!-- Begin Awana Section -->
 	
-						<? if($wpdb->blogid == 55){ ?>
+						<?php if($wpdb->blogid == 55){ ?>
 						  <li>
 						  <a href="<?php bloginfo('url'); ?>/truth/">Truth & Training</a>
 						  </li>
@@ -116,24 +116,24 @@
 						  	</script>
 						  <a href="JavaScript:newPopup('http://www.awana.org/athome/index.html');">Awana at Home</a>  
 						  </li>
-						<? } ?>
+						<?php } ?>
 
 <!-- End Awana Section -->
 
 
 <!-- Begin RURO Section -->
 
-						<? if($wpdb->blogid == 57){ ?>
+						<?php if($wpdb->blogid == 57){ ?>
 						  <li>
 						  <a href="<?php bloginfo('url'); ?>/job/">Job Board</a>
 						  </li>
-						<? } ?>
+						<?php } ?>
 
 <!-- End RURO Section -->
 
 <!-- Begin Mosiac Section -->
 
-						<? if($wpdb->blogid == 61){ ?>
+						<?php if($wpdb->blogid == 61){ ?>
 						  <li>
 						  <a href="<?php bloginfo('url'); ?>/stories/">Stories</a>
 						  </li>
@@ -143,7 +143,7 @@
 						<strong><a href="http://www.stonebriar.org/blog/category/ministries/fellowship-groups/mosaic/" target="new">Blog</a></strong>
 					</dd> 
 						  </li>
-<? } ?>
+<?php } ?>
 
 <!-- End Mosiac Section -->
 
@@ -153,18 +153,18 @@
 
 <!-- *EXAMPLE* Begin [Group Name] Section *EXAMPLE* -->
 
-						<? if($wpdb->blogid == 0){ ?> <!-- Replace 00 with the blog id -->
+						<?php if($wpdb->blogid == 0){ ?> <!-- Replace 00 with the blog id -->
 						  <li>
 						  <a href="<?php bloginfo('url'); ?>/pageslug/">Page Name</a> <!-- Replace /pageslug/ with the page slug of the page you want the link to take you to. Replace 'Page Name' with The name of the Link you want displayed -->
 						  </li>
-						<? } ?>
+						<?php } ?>
 
 <!-- *EXAMPLE* End [Group Name] Section *EXAMPLE* -->
 
 
 
 <!-- *DON'T EDIT BELOW THIS LINE* -->	
-					  <? } ?>
+					  <?php } ?>
 
 			<!--  ******************** End Require Login Group Specific Links ******************** -->	
 					</ul>
@@ -174,7 +174,7 @@
 			</ul>
 			</div>
 
-			<? if($wpdb->blogid == 18){ 
+			<?php if($wpdb->blogid == 18){ 
 /********
 code for widget testing
 ********/
@@ -225,7 +225,7 @@ code for widget testing
 				</dl>
 			</div>
 
-			<? } // END CODE FOR WIDGET TESTING ?>
+			<?php } // END CODE FOR WIDGET TESTING ?>
 
 			<div id="sidebar">
 			<?php if ( function_exists ( dynamic_sidebar(1) ) ) : ?>

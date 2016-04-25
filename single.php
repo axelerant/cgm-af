@@ -1,20 +1,20 @@
-<? get_header(); ?>
+<?php get_header(); ?>
 
-<? get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 		<div class="three_quarters">
 		<h1>Lessons</h1>
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<h3><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h3> 
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 
 				<h6><?php the_time('F jS, Y') ?></h6>
-				<? the_content(); ?>
-			<? endwhile; endif; ?>
+				<?php the_content(); ?>
+			<?php endwhile; endif; ?>
 			<span class="clear">&nbsp;</span>
 			
-			<? $counter = 0; ?>
+			<?php $counter = 0; ?>
 			<?php query_posts('showposts=5&order=DESC') ?>
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<? if ( $counter < 1 ) { ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php if ( $counter < 1 ) { ?>
 				
 				<br><br>
 				<table class="data">
@@ -24,10 +24,10 @@
 						<th>Date</th>
 					</tr>
 					
-				<? } ?>
+				<?php } ?>
 					
 					<tr>
-						<td ><a href="<? the_permalink(); ?>"><? the_title(); ?></a></td>
+						<td ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 						<?php 
 							//need to create short version of description here 
 							$content = get_the_content('');
@@ -45,12 +45,12 @@
 						<td><?php the_time('n/j/Y') ?></td>
 					</tr>
 							
-				<? $counter++; ?> 		
-			<? endwhile; endif; ?>
-			<? if ( have_posts() ) { echo '</table>'; } ?>
+				<?php $counter++; ?> 		
+			<?php endwhile; endif; ?>
+			<?php if ( have_posts() ) { echo '</table>'; } ?>
 			<span class="clear">&nbsp;</span>
 			
 		</div>
 		<!-- end .three_quarters -->
 
-<? get_footer(); ?>
+<?php get_footer(); ?>

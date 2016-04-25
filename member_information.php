@@ -3,13 +3,13 @@
 	Template Name: Member Information
 */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 
-<? get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 		<div class="three_quarters">
 		
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="post" id="post-<?php the_ID(); ?>">
 					<h1><?php the_title(); ?></h1>
 						<div class="entry">
@@ -19,8 +19,8 @@
 						</div>
 				</div>
 				<span class="clear">&nbsp;</span>
-			<? endwhile; endif; ?>
-			<? if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what you are looking for.</p><? } ?>
+			<?php endwhile; endif; ?>
+			<?php if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what you are looking for.</p><?php } ?>
 				
 			<h2>Subscribe to Newsletter</h2>
 			<ul>
@@ -31,11 +31,11 @@
 				?>
 			  <form name="notifymeForm" method="post" action="notifyme.php">
 			    <input type="hidden" name="maillistid" value="1">
-			    <input type="hidden" name="naatan_notifyme_name" value="<? echo($user_info->first_name .  " " . $user_info->last_name); ?>">
-			    <input type="hidden" name="naatan_notifyme_email" value="<? echo $user_email; ?>">
-			    <input type="hidden" name="naatan_notifyme_website" value="<? echo $user_info->ID; ?>">
-			    Name: <? echo($user_info->first_name .  " " . $user_info->last_name); ?> <br>
-			    email: <? echo $user_email; ?> <br><br>
+			    <input type="hidden" name="naatan_notifyme_name" value="<?php echo($user_info->first_name .  " " . $user_info->last_name); ?>">
+			    <input type="hidden" name="naatan_notifyme_email" value="<?php echo $user_email; ?>">
+			    <input type="hidden" name="naatan_notifyme_website" value="<?php echo $user_info->ID; ?>">
+			    Name: <?php echo($user_info->first_name .  " " . $user_info->last_name); ?> <br>
+			    email: <?php echo $user_email; ?> <br><br>
 			    <input type="submit" name="submit_notifyme_subscribe" value="Subscribe" style="margin-top: 2px;">
 			  </form>
 			</ul>	
@@ -46,5 +46,5 @@
 		</div>
 		<!-- end .three_quarters -->
 
-<? get_footer(); ?>
+<?php get_footer(); ?>
 

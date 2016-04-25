@@ -3,14 +3,14 @@
 	Template Name: Group List Page
  */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 
 		<div class="quarter">
 
 		<h5><a href="http://af.stonebriar.org/" >Fellowship Groups</a></h5>
 			<div class="menu">
 			<ul id="menu">
-<?  
+<?php  
 global $current_site;
 // print_r($current_site); echo "\n<br />"; echo '' . __LINE__ . ':' . basename( __FILE__ )  . "\n<br />";
 $blogs = $wpdb->get_results( $wpdb->prepare("SELECT blog_id, domain, path FROM $wpdb->blogs WHERE site_id = %d AND public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' ORDER BY registered DESC", $wpdb->siteid), ARRAY_A );
@@ -36,7 +36,7 @@ foreach ($blogs as $blog) {
 
 		<div class="three_quarters">
 		<?php query_posts('pagename=home') ?>
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="post" id="post-<?php the_ID(); ?>">
 					<h1><?php the_title(); ?></h1>
 						<div class="entry">
@@ -51,10 +51,10 @@ foreach ($blogs as $blog) {
 						</div>
 				</div>
 				<span class="clear">&nbsp;</span>
-			<? endwhile; endif; ?>
-			<? if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what youre looking for.</p><? } ?>
+			<?php endwhile; endif; ?>
+			<?php if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what youre looking for.</p><?php } ?>
 
-<?  
+<?php  
 global $current_site;
 $blogs = $wpdb->get_results( $wpdb->prepare("SELECT blog_id, domain, path FROM $wpdb->blogs WHERE site_id = %d AND public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' ORDER BY registered DESC", $wpdb->siteid), ARRAY_A );
 //echo $blogs;
@@ -75,4 +75,4 @@ foreach ($blogs as $blog) {
 		</div>
 		<!-- end .three_quarters -->
 
-<? get_footer(); ?>
+<?php get_footer(); ?>

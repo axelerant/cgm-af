@@ -3,13 +3,13 @@
 	Template Name: Home Page
 */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 
-<? get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 		<div class="three_quarters">
 		<?php query_posts('pagename=home') ?>
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="post" id="post-<?php the_ID(); ?>">
 					<h1><?php the_title(); ?></h1>
 						<div class="entry">
@@ -20,10 +20,10 @@
 						</div>
 				</div>
 				<span class="clear">&nbsp;</span>
-			<? endwhile; endif; ?>
-			<? if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what youre looking for.</p><? } ?>			
+			<?php endwhile; endif; ?>
+			<?php if(!have_posts()){ ?><p class="notice">Sorry, there are no posts matching what youre looking for.</p><?php } ?>			
 		
 		</div>
 		<!-- end .three_quarters -->
 
-<? get_footer(); ?>
+<?php get_footer(); ?>

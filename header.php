@@ -12,13 +12,13 @@
 		@import url( <?php bloginfo('stylesheet_url'); ?> );
 	</style>
 
-	<link rel="stylesheet" type="text/css" href="<? bloginfo('template_url'); ?>/css/stonebriar_print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/stonebriar_print.css" media="print" />
 	<!--[if IE]>
-		<link rel="stylesheet" href='<? bloginfo('template_url'); ?>/css/ie_fixes.css' type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href='<?php bloginfo('template_url'); ?>/css/ie_fixes.css' type="text/css" media="screen, projection" />
 	<![endif]-->
 
 	<script type="text/javascript">
-		document.write('<link rel="stylesheet" href="<? bloginfo('template_url'); ?>/css/preset.css" type="text/css" media="screen, projection" />');
+		document.write('<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/preset.css" type="text/css" media="screen, projection" />');
 	</script>
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -35,8 +35,7 @@
 	<a href="#content">Skip to main content</a>
 </p>
 
-<?
-// ministry_index
+<?php // ministry_index
 	// $temp_dir = get_bloginfo('template_directory');
 	// $nav = curl_init($temp_dir.'/header_info_dropdown.html');
 	$nav = curl_init('http://www.stonebriar.org/?blogheadermenu&type=11');
@@ -61,7 +60,7 @@
 					Search
 				</label>
 				<input type="text" id="search_field" name="search_field" />
-				<input type="image" id="search_button" src="<? bloginfo('template_url'); ?>/images/search_button.gif" alt="Search" />
+				<input type="image" id="search_button" src="<?php bloginfo('template_url'); ?>/images/search_button.gif" alt="Search" />
 
 			</p>
 			<div class="clear">&nbsp;</div>
@@ -71,8 +70,7 @@
 </div>
 
 <!-- end #header_wrap -->
-<?
-	// main nav
+<?php 	// main nav
 	$temp_dir = get_bloginfo('template_directory');
 	$nav = curl_init($temp_dir.'/header_info.html');
 	
@@ -98,20 +96,20 @@
 		</td>
 		<td align="right">
 		<p id="breadcrumbs">
-		<? global $user_ID;
+		<?php global $user_ID;
 		   if ( $user_ID ) {
 		?>
 		<span style="font: 10px Verdana, sans-serif;color: #92866a;font-weight: normal;">
-			Logged in as [<a href="<?=get_option('siteurl');?>/wp-admin/profile.php">
+			Logged in as [<a href="<?php echo get_option('siteurl');?>/wp-admin/profile.php">
 				<?php global $user_identity;
 				get_currentuserinfo();
 				echo($user_identity);
 				?>
 			</a>] <a href="<?php echo wp_logout_url(); ?>" title="Log out of this account">Logout</a>
 		</span>
-		<? } else { ?>
+		<?php } else { ?>
 			<a href="<?php bloginfo('url'); ?>/wp-login.php">Login</a>
-		<? } ?>
+		<?php } ?>
 		</p>
 		</td>
 		</table>

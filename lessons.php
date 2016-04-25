@@ -3,25 +3,25 @@
 	Template Name: Lessons
 */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 
-<? get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
 <div class="three_quarters">
 	<h1>Lessons</h1>
-	<? //if(is_user_member_of_blog(get_current_user_id())){ ?>
+	<?php //if(is_user_member_of_blog(get_current_user_id())){ ?>
 	<?php
 		$lessons_id = $wpdb->get_var( "SELECT cat_ID FROM {$wpdb->sitecategories} WHERE category_nicename = 'lessons'" );
 		query_posts('cat='.$lessons_id); ?>
 	<br><br><h1>
 	<?php echo $lessons_id . " lessons_id"; ?>
 	<br><br></h1>
-	<? $counter = 0; ?>
-	<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<? if ($counter < 1 ) { ?>
+	<?php $counter = 0; ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php if ($counter < 1 ) { ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
-			<h3><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h3>
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			<h6><?php the_time('F jS, Y') ?></h6>
 				<div class="entry">
 					<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
@@ -32,7 +32,7 @@
 		<span class="clear">&nbsp;</span>
 
 
-		<? } if ( $counter < 1 ) { ?>
+		<?php } if ( $counter < 1 ) { ?>
 
 		<br><br>
 		<table class="data">
@@ -42,10 +42,10 @@
 				<th>Date</th>
 			</tr>
 
-		<? } ?>
+		<?php } ?>
 
 			<tr>
-				<td ><a href="<? the_permalink(); ?>"><? the_title(); ?></a></td>
+				<td ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 				<?php
 					//need to create short version of description here
 					$content = get_the_content('');
@@ -64,22 +64,22 @@
 				<td><?php the_time('n/j/Y') ?></td>
 			</tr>
 
-		<? $counter++; ?>
+		<?php $counter++; ?>
 
-	<? endwhile; endif; ?>
-	<? if ( have_posts() ) { echo '</table>'; } ?>
+	<?php endwhile; endif; ?>
+	<?php if ( have_posts() ) { echo '</table>'; } ?>
 	<span class="clear">&nbsp;</span>
-	<? if(!have_posts()){ ?>
+	<?php if(!have_posts()){ ?>
 		<p class="notice">Sorry, there are no posts matching what you are looking for.</p>
 		<br><br><h1>
 		<?php echo $lessons_id . " lessons_id"; ?>
 		<br><br></h1>
 
-	<? } ?>
-	<? //} else { ?>
+	<?php } ?>
+	<?php //} else { ?>
 	<!--<p class="notice">Sorry, you must be logged in to view this page.<br><a href="<?php bloginfo('url'); ?>/scc-login.php">Click here to login now</a></p>-->
-	<? //} ?>
+	<?php //} ?>
 </div>
 <!-- end .three_quarters -->
 
-<? get_footer(); ?>
+<?php get_footer(); ?>
