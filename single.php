@@ -1,0 +1,56 @@
+<? get_header(); ?>
+
+<? get_sidebar(); ?>
+
+		<div class="three_quarters">
+		<h1>Lessons</h1>
+			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<h3><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h3> 
+				<h6><?php the_time('F jS, Y') ?></h6>
+				<? the_content(); ?>
+			<? endwhile; endif; ?>
+			<span class="clear">&nbsp;</span>
+			
+			<? $counter = 0; ?>
+			<?php query_posts('showposts=5&order=DESC') ?>
+			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<? if ( $counter < 1 ) { ?>
+				
+				<br><br>
+				<table class="data">
+					<tr>
+						<th width="25%">Topic</th>
+						<th>Description</th>
+						<th>Date</th>
+					</tr>
+					
+				<? } ?>
+					
+					<tr>
+						<td ><a href="<? the_permalink(); ?>"><? the_title(); ?></a></td>
+						<?php 
+							//need to create short version of description here 
+							$content = get_the_content('');
+							$len = strlen($content);
+							//echo $len;
+							$the_description = '';
+							if ( $len < 350 ) {
+								$the_description = $content;
+							} else {
+								$the_description = substr($content, 0, 350);
+								$the_description .= ' ... <a href="'. get_permalink().'">[more]</a>';
+							}
+						?>
+						<td><?php echo $the_description; ?></td>
+						<td><?php the_time('n/j/Y') ?></td>
+					</tr>
+							
+				<? $counter++; ?> 		
+			<? endwhile; endif; ?>
+			<? if ( have_posts() ) { echo '</table>'; } ?>
+			<span class="clear">&nbsp;</span>
+			
+		</div>
+		<!-- end .three_quarters -->
+
+<? get_footer(); ?>

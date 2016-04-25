@@ -1,0 +1,800 @@
+*
+{
+	background: none;
+	border: 0;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.shadow,
+#ministry_index,
+#header form,
+#header span,
+#ministry_tab,
+#nav_main_wrap,
+#nav_sub_wrap,
+#get_map,
+#new_here,
+#footer .left a
+{
+	display: none;
+}
+
+/* =Basic HTML, IDs and Classes
+----------------------------------------------------------------------*/
+
+body
+{
+	font: 12px "Trebuchet MS", Arial, sans-serif;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.clear
+{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+#skip_links
+{
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* =Header
+----------------------------------------------------------------------*/
+
+#header h1 img
+{
+	display: block;
+	margin: 0 0 20px;
+}
+
+/* =Content
+----------------------------------------------------------------------*/
+
+#content
+{
+	border-top: 2px solid #000;
+	width: 960px;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+#content hr,
+#content p,
+#content ol,
+#content ul,
+#content table,
+#main_sub dl,
+#main_news dl
+{
+	font-weight: normal;
+	margin: 0 0 20px;
+}
+
+#content h1
+{
+	border-bottom: 2px solid #000;
+	font-size: 22px;
+	padding: 0 0 5px;
+}
+
+#content h2
+{
+	font-size: 20px;
+}
+
+#content h3
+{
+	font-size: 18px;
+}
+
+#content h4
+{
+	font: italic 16px Georgia, serif;
+}
+
+#content h5
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#content h6
+{
+	font: bold 12px Georgia, serif;
+}
+
+#content hr
+{
+	border-top: 2px solid #000;
+	clear: both;
+}
+
+#content a
+{
+	text-decoration: underline;
+}
+
+#content a.term
+{
+	text-decoration: none;
+}
+
+#content.home a
+{
+	text-decoration: none;
+}
+
+#content img.right,
+#content blockquote.right
+{
+	display: inline;
+	margin: 0 0 0 10px;
+}
+
+#content img.left,
+#content blockquote.left
+{
+	display: inline;
+	margin: 0 10px 0 0;
+}
+
+#content img.photo_frame_medium
+{
+	width: 210px;
+	height: 160px;
+}
+
+#content img.photo_frame_wide
+{
+	width: 580px;
+	height: 180px;
+}
+
+#content ol,
+#content ul
+{
+	margin-left: 20px;
+}
+
+#content blockquote
+{
+	margin: 0 15px;
+}
+
+#content p,
+#content li
+{
+	line-height: 150%;
+}
+
+#content blockquote p
+{
+	padding: 10px;
+}
+
+#content blockquote.pull
+{
+	font: italic 15px Georgia, serif;
+	width: 250px;
+}
+
+#content blockquote.pull p
+{
+	margin-bottom: 10px;
+}
+
+/* =Breadcrumbs
+----------------------------------------------------------------------*/
+
+#content p#breadcrumbs
+{
+	font: bold 10px Verdana, sans-serif;
+	margin-bottom: 0;
+	padding: 10px 20px 15px;
+}
+
+#content p#breadcrumbs a
+{
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#content p#breadcrumbs a:hover
+{
+	text-decoration: underline;
+}
+
+/* =Data Table
+----------------------------------------------------------------------*/
+
+table.data
+{
+	text-align: left;
+	width: 100%;
+}
+
+table.data th,
+table.data td
+{
+	padding: 5px 10px;
+}
+
+table.data th
+{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+table.data tr.alt
+{
+	border-top: 1px solid #000;
+}
+
+/* =Panoramic
+----------------------------------------------------------------------*/
+
+#panoramic
+{
+	position: relative;
+	width: 960px;
+}
+
+#panoramic img
+{
+	text-align: right;
+}
+
+#corner_overlay
+{
+	font-size: 11px;
+	padding: 15px 0 0 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 265px;
+	height: 266px;
+	z-index: 1;
+}
+
+#content #corner_overlay h2
+{
+	font-size: 17px;
+	font-weight: normal;
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+}
+
+#corner_overlay dl
+{
+	float: left;
+	padding: 0 30px 0 0;
+}
+
+#corner_overlay dt
+{
+	font-size: 14px;
+}
+
+#corner_overlay dd
+{
+	padding: 5px 0 0;
+}
+
+#corner_overlay address
+{
+	float: left;
+	font-style: normal;
+	line-height: 150%;
+	margin: 0 0 15px;
+	padding: 0 0 0 5px;
+}
+
+#photo_wide
+{
+	float: right;
+	width: 740px;
+	height: 220px;
+}
+
+/* =Helpful Links
+----------------------------------------------------------------------*/
+
+#helpful_links
+{
+	border-top: 2px solid #000;
+	clear: both;
+	font-size: 11px;
+	width: 960px;
+}
+
+#helpful_links a
+{
+	text-transform: lowercase;
+}
+
+#helpful_links dt,
+#helpful_links dd
+{
+	float: left;
+}
+
+#helpful_links dd
+{
+	padding: 9px 0 10px 35px;
+}
+
+#helpful_links dt
+{
+	padding: 9px 0 10px;
+	width: 370px;
+	text-align: right;
+}
+
+/* =Definition Lists - Home Page
+----------------------------------------------------------------------*/
+
+#dl_visit,
+#dl_needs
+{
+	display: inline;
+	padding: 0 0 15px;
+}
+
+#dl_visit
+{
+	float: left;
+}
+
+#dl_needs
+{
+	float: right;
+	min-height: 153px;
+	padding-left: 250px;
+	text-align: right;
+}
+
+#dl_visit dt,
+#dl_needs dt
+{
+	font-size: 24px;
+	margin: 0 0 10px;
+}
+
+#dl_visit dd,
+#dl_needs dd,
+#bottom_overlay dd
+{
+	margin: 0 0 5px;
+}
+
+/* =Bottom Overlay - Home Page
+----------------------------------------------------------------------*/
+
+#bottom_overlay
+{
+	border: 1px solid #000;
+	clear: both;
+	margin: 0 0 20px;
+	padding: 0 15px 0 20px;
+}
+
+#bottom_overlay dl
+{
+	float: left;
+	display: inline;
+	padding: 15px 0;
+}
+
+#bottom_overlay dt
+{
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+
+#bottom_overlay p
+{
+	display: inline;
+	float: right;
+	font-size: 11px;
+	line-height: 170%;
+	margin: 0;
+	padding: 15px 0;
+	text-align: right;
+	width: 350px;
+}
+
+#bottom_overlay p a
+{
+	font-size: 18px;
+}
+
+#bottom_overlay img
+{
+	display: inline;
+	float: right;
+	margin: 0 0 0 15px;
+	width: 140px;
+	height: 140px;
+}
+
+/* =Quick Links
+----------------------------------------------------------------------*/
+
+ul#quick_links
+{
+	float: right;
+	font-size: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 5px 0 0;
+	overflow: hidden;
+	width: 246px;
+}
+
+ul#quick_links li
+{
+	line-height: normal;
+}
+
+ul#quick_links a
+{
+	display: block;
+	height: 130px;
+	position: relative;
+}
+
+ul#quick_links a span
+{
+	display: block;
+	position: absolute;
+	top: 45px;
+	left: 20px;
+	width: 80px;
+}
+
+/* =Main - Home Page
+----------------------------------------------------------------------*/
+
+#main_home
+{
+	float: left;
+	font-size: 12px;
+	padding: 20px 0 0 20px;
+	width: 660px;
+}
+
+/* =Main - Sub Page
+----------------------------------------------------------------------*/
+
+#main_sub
+{
+	float: right;
+	padding: 0 30px 10px 0;
+	width: 640px;
+}
+
+/* =Main - News Page
+----------------------------------------------------------------------*/
+
+#main_news
+{
+	float: left;
+	padding: 15px 20px 10px;
+	width: 600px;
+}
+
+/* =Main - Definition List
+----------------------------------------------------------------------*/
+
+#main_sub dt,
+#main_news dt
+{
+	border-bottom: 2px solid #000;
+	font-size: 15px;
+	margin: 0 0 5px;
+	padding: 0 0 5px;
+}
+
+#main_sub dd,
+#main_news dd
+{
+	padding: 5px 0 5px 20px;
+}
+
+/* =Sidebar - Sub Page
+----------------------------------------------------------------------*/
+
+#sidebar_sub
+{
+	float: left;
+	padding: 0 0 10px 20px;
+	width: 250px;
+}
+
+#sidebar_sub h2
+{
+	font-size: 15px;
+}
+
+/* =Sidebar - Single Page
+----------------------------------------------------------------------*/
+
+#sidebar_news
+{
+	float: right;
+	padding: 15px 0 10px 0;
+	width: 310px;
+}
+
+/* =Chunk - Global Settings
+----------------------------------------------------------------------*/
+
+.chunk_topper
+{
+	font-size: 1px;
+	line-height: 1px;
+	overflow: hidden;
+	position: relative;
+}
+
+.chunk_middle dl
+{
+	position: relative;
+	z-index: 1;
+}
+
+.chunk_middle dt
+{
+	font-size: 15px;
+}
+
+.chunk_middle dd
+{
+	font-size: 11px;
+}
+
+/* =Chunk - News Page
+----------------------------------------------------------------------*/
+
+#sidebar_news .chunk_topper
+{
+	width: 295px;
+	height: 85px;
+}
+
+#sidebar_news .chunk_middle dl
+{
+	margin: -70px 0 10px 0;
+	padding: 0 40px 15px 25px;
+}
+
+#sidebar_news .chunk_middle dt
+{
+	margin: 0 0 5px 0;
+}
+
+#sidebar_news .chunk_middle dd
+{
+	border-top: 2px solid #000;
+	line-height: 150%;
+	padding: 10px 0 10px 20px;
+}
+
+/* =Chunk - Sub Page
+----------------------------------------------------------------------*/
+
+#sidebar_sub .chunk_topper
+{
+	margin: 0 0 0 -10px;
+	width: 242px;
+	height: 80px;
+}
+
+#sidebar_sub .chunk_middle
+{
+	margin: 0 0 5px -10px;
+	width: 242px;
+}
+
+#sidebar_sub .chunk_middle dl
+{
+	margin: -60px 0 0 0;
+	padding: 0 0 25px 20px;
+}
+
+#sidebar_sub .chunk_middle dt
+{
+	border-bottom: 2px solid #000;
+	margin: 0 20px 5px 0;
+	padding: 0 0 5px;
+}
+
+#sidebar_sub .chunk_middle dd
+{
+	line-height: 160%;
+	padding: 0 0 0 10px;
+}
+
+/* =Menu
+----------------------------------------------------------------------*/
+
+#content #menu_heading
+{
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+ul#menu
+{
+	font-size: 11px;
+	list-style: none;
+	margin: 0 0 20px;
+}
+
+ul#menu ul
+{
+	list-style: none;
+	margin: 0 0 0 20px;
+}
+
+ul#menu a
+{
+	text-decoration: none;
+}
+
+ul#menu a.arrow
+{
+	display: inline;
+	float: left;
+	font-size: 1px;
+	line-height: 1px;
+	margin: 2px 5px 0 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 10px;
+	height: 10px;
+}
+
+ul#menu a.arrow.on
+{
+	background-position: 0 0;
+}
+
+ul#menu li
+{
+	padding: 5px 0 0;
+}
+
+/* =Columns - Quarter
+----------------------------------------------------------------------*/
+
+div.full
+{
+	width: 960px;
+}
+
+div.full img.full
+{
+	width: 960px;
+}
+
+div.half
+{
+	float: left;
+	padding: 0 40px 0 0;
+	width: 440px;
+}
+
+div.third
+{
+	float: left;
+	padding: 0 40px 0 0;
+	width: 280px;
+}
+
+div.quarter
+{
+	float: left;
+	padding: 0 40px 0 0;
+	width: 200px;
+}
+
+/* =This Week
+----------------------------------------------------------------------*/
+
+#this_week
+{
+	border-top: 2px solid #000;
+	position: relative;
+	clear: both;
+	width: 960px;
+	height: 65px;
+}
+
+#this_week_heading
+{
+	display: block;
+	font-size: 15px;
+	position: absolute;
+	overflow: hidden;
+	top: 20px;
+	left: 40px;
+	width: 312px;
+	height: 65px;
+}
+
+#this_week a
+{
+	display: block;
+	width: 960px;
+	height: 65px;
+}
+
+#this_week_sermon
+{
+	font-size: 18px;
+	position: absolute;
+	top: 15px;
+	left: 340px;
+}
+
+#this_week_title
+{
+	font-size: 24px;
+}
+
+#this_week_date
+{
+	display: block;
+	font-size: 15px;
+	position: absolute;
+	text-align: center;
+	top: 20px;
+	right: 40px;
+}
+
+/* =Footer
+----------------------------------------------------------------------*/
+
+#footer
+{
+	border-top: 2px solid #000;
+	line-height: 140%;
+	padding: 15px 0 0;
+	font-size: 11px;
+	width: 960px;
+}
+
+#footer .vcard
+{
+	float: right;
+	font-style: normal;
+	padding: 0 0 20px 0;
+	text-align: right;
+}

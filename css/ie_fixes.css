@@ -1,0 +1,121 @@
+hr
+{
+	margin-top: -7px;
+	margin-bottom: 13px;
+}
+
+#bottom_overlay
+{
+	margin-top: -20px;
+}
+
+#nav_sub li.current,
+.chunk_topper,
+.chunk_middle dl
+{
+	zoom: 1;
+}
+
+* html #nav_main a,
+* html #nav_sub a,
+* html ul#rotator a
+{
+	width: 1%;
+}
+
+* html #get_map
+{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/get_map.png', sizingMethod='crop');
+}
+
+* html #new_here
+{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/new_here.png', sizingMethod='crop');
+}
+
+* html #header h1 a
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/logo.png', sizingMethod='crop');
+}
+
+* html #ministry_tab
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/ministry_tab.png', sizingMethod='crop');
+}
+
+* html #header form
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/search_tab.png', sizingMethod='crop');
+}
+
+* html #corner_overlay
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/corner_overlay.png', sizingMethod='crop');
+}
+
+* html #corner_overlay h2
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/ornate_line.png', sizingMethod='crop');
+}
+
+* html #dl_needs
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/dl_needs.png', sizingMethod='crop');
+	height: 153px;
+}
+
+* html #bottom_overlay
+{
+	background-image: url(..img/bottom_overlay.gif);
+	background-repeat: repeat-y;
+	border-left: 0;
+	border-right: 0;
+}
+
+* html #bottom_overlay img
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/photo_frame_small.png', sizingMethod='crop');
+}
+
+* html #quick_links_theology
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/quick_links_theology.png', sizingMethod='crop');
+}
+
+* html #quick_links_serve
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/quick_links_serve.png', sizingMethod='crop');
+}
+
+* html #quick_links_group
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/quick_links_group.png', sizingMethod='crop');
+}
+
+* html #this_week_heading
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/this_week_heading.png', sizingMethod='crop');
+}
+
+* html #this_week_date
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/this_week_date.png', sizingMethod='crop');
+}
+
+* html .shadow
+{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://af.stonebriar.org/wp-content/themes/cgm/images/shadow.png', sizingMethod='scale');
+}

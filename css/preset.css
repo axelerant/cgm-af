@@ -1,0 +1,15 @@
+ul#menu ul
+{
+	display: none;
+}
+
+ul#menu a.arrow,
+#ministry_tab
+{
+	visibility: visible;
+}
+
+#ministry_index
+{
+	display: none;
+}
